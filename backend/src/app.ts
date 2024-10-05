@@ -18,7 +18,7 @@ const io = new SocketIOServer(server, {
 app.use(express.json());
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
+    origin: process.env.FRONTEND_URL || "https://chat-room-app-fawn.vercel.app/",
   })
 );
 app.use("/api", chatRoutes);
