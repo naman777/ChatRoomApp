@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { SERVER_URL } from "./constant";
-import { ArrowBigLeft, ArrowLeft, Plus } from "lucide-react";
+import {  ArrowLeft, } from "lucide-react";
 
 interface RoomSelectorProps {
   setRoom: (room: string) => void;
@@ -35,6 +35,7 @@ const RoomSelector: React.FC<RoomSelectorProps> = ({ setRoom }) => {
         .then((res) => {
           setRooms([...rooms, roomName]);
           setRoom(roomName);
+          console.log(res.data.message);
         })
         .catch((err) => {
           alert(err.response.data.message);

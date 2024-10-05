@@ -4,7 +4,6 @@ import {
   Route,
   Routes,
   useNavigate,
-  useParams,
 } from "react-router-dom";
 import RoomSelector from "./components/RoomSelector";
 import ChatRoom from "./components/ChatRoom";
